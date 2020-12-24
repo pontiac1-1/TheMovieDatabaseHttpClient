@@ -1,0 +1,20 @@
+{
+    "name": "tmdb/api_client",
+    "description": "Http Client for The Movie Database API",
+    "authors": [
+        {
+            "name": "Suppan Miklós",
+            "email": "suppanmiklos@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "classmap": [
+            "database"
+        ],
+        "psr-4": {
+            "App\\": "app/",
+            "Devdojo\\Calculator\\": "packages/devdojo/calculator/src"
+        }
+    }
+}
