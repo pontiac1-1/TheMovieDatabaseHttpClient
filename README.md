@@ -16,7 +16,7 @@ Http Client to get TMDb's Top Rated Movies list and some further details on dire
 > php artisan tmdb:get 210
 
 ###### start scheduler worker to update database
-> php artisan schedlue:work
+> php artisan schedule:work
 
 ###### or update manually
 > php artisan tmdb:update
