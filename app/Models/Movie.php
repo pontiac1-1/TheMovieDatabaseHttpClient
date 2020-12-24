@@ -21,6 +21,8 @@ class Movie extends Model {
         'genres' => 'array'
     ];
 
+    protected $primaryKey = 'tmdb_id';
+
     /**
      * BelongsToMany relation with Director model
      * @return mixed

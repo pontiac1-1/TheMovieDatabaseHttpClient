@@ -16,7 +16,7 @@ class CreateMovieDirectorsTable extends Migration
         Schema::create('movie_directors', function (Blueprint $table) {
             $table->id();
             $table->integer('director_id');
-            $table->integer('movie_id');
+            $table->integer('movie_tmdb_id');
         });
     }
 

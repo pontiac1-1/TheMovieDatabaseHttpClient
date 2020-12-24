@@ -108,7 +108,10 @@ class Controller {
                 $this->updateOrCreateRecords(array_slice($movies, 0, $reminder));
 
                 if(Movie::count() > $cardinality) {
-                    Movie::all()->orderBy('tmdb_vote_avg')->take(Movie::count() - $cardinality)->delete();
+                    $moviesToDelete = Movie::all()->sortBy('tmdb_vote_avg')->take(Movie::count() - $cardinality);
+                    foreach($moviesToDelete as $movieToDelete) {
+                        $movieToDelete->delete();
+                    }
                 }
 
                 return;
